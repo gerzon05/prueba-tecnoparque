@@ -24,6 +24,11 @@ export default async function name({ params }: { params: { name: string } }) {
                     <MoveLeft className="md:size-8" />
                 </Link>
             </Button>
+            <div className='flex justify-center w-full z-10 fixed bottom-2'>
+                <Button className='w-fit md:text-3xl' variant={'secondary'} asChild>
+                    <Link href="/battleground">Battleground</Link>
+                </Button>
+            </div>
             <div className="md:px-20 md:h-screen relative overflow-hidden flex justify-center items-center">
                 <Image
                     src={fondo}
