@@ -21,16 +21,7 @@ export async function getPokemonDetail(url: string) {
     toast.error('Error al obtener los detalles del Pokemon');
   }
 }
-export async function getPokemonForName(name: string) {
-  try {
-    const data = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
-    const response = await data.json();
-    return response;
-  } catch (error) {
-    toast.error('Error al encontrar el Pokemon');
-  }
-}
-export async function getPokemonUrlAbiliti(url: string) {
+export async function getPokemonForName(name: string | number) {
   try {
     const data = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
     const response = await data.json();

@@ -15,7 +15,7 @@ export default async function name({ params }: { params: { name: string } }) {
     return (
         <>
             <Button
-                className="absolute top-5 left-5 z-10 md:size-10"
+                className="absolute top-5 left-5 z-10 md:size-10 bg-muted"
                 variant={'outline'}
                 size={'icon'}
                 asChild
@@ -26,7 +26,7 @@ export default async function name({ params }: { params: { name: string } }) {
             </Button>
             <div className='flex justify-center w-full z-10 fixed bottom-2'>
                 <Button className='w-fit md:text-3xl' variant={'secondary'} asChild>
-                    <Link href="/battleground">Battleground</Link>
+                    <Link href={`/battleground/${params.name}`}>Select</Link>
                 </Button>
             </div>
             <div className="md:px-20 md:h-screen relative overflow-hidden flex justify-center items-center">
@@ -47,7 +47,7 @@ export default async function name({ params }: { params: { name: string } }) {
             </div>
             <section className="px-3 pt-10 text-center pb-4">
                 <h2 className="text-center font-bold text-6xl md:text-9xl">
-                    {params.name}
+                    {params.name.toLocaleUpperCase()}
                 </h2>
                 <Badge className="text-lg md:text-5xl py-1 mt-4 px-4 md:px-10 bg-secondary text-black">
                     {pokemondatails.types[0].type.name}
@@ -93,7 +93,7 @@ export default async function name({ params }: { params: { name: string } }) {
                                 {stat.stat.name}
                             </Badge>
                             <Progress
-                                className="w-full"
+                                className="bg-primary"
                                 value={stat.base_stat}
                                 max={100}
                             ></Progress>
