@@ -17,7 +17,7 @@ export default async function Page({ params }: { params: { name: string } }) {
     return (
         <>
             <Button
-                className="absolute top-1 left-1 md:top-5 md:left-5 z-10 md:size-10 bg-muted"
+                className="absolute top-1 left-1 md:top-5 md:left-5 z-20 md:size-10 bg-muted"
                 variant={'outline'}
                 size={'icon'}
                 asChild

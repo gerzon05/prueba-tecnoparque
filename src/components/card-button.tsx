@@ -9,7 +9,7 @@ export default function CardButton({src, name, move}: {src: string, name: string
         toast.info(`Usara el ataque de ${ataque}`);
     }
     return(
-        <Button className='border rounded-md p-4 flex flex-col items-center w-fill hover:bg-secondary/20 h-auto bg-transparent' onClick={(e)=> handleClick(e,move)}>
+        <Button className='border rounded-md p-4 flex flex-col items-center w-fill hover:bg-secondary/20 h-auto bg-transparent focus-within:bg-secondary/20' onClick={(e)=> handleClick(e,move)}>
         <Image src={src} alt={name} width={100} height={0} className="object-contain fondo" />
         <p>
         {move}
