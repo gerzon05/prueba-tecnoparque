@@ -12,6 +12,7 @@ export default async function name({ params }: { params: { name: string } }) {
     const pokemonabiliti = await getPokemonDetail(
         pokemondatails.abilities[0].ability.url
     );
+    console.log(pokemondatails)
     return (
         <>
             <Button
