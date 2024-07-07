@@ -26,7 +26,7 @@ export default function RootLayout({
         className={cn('bg-background font-sans antialiased', fontSans.variable)}
       >
         <main className="min-h-screen">
-          <Toaster position="bottom-right" />
+          <Toaster position="bottom-right" duration={700} />
           {children}
         </main>
       </body>
