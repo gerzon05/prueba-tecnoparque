@@ -15,9 +15,15 @@ export default function Battle({ pokemondatails, pokemonAuto }: { pokemondatails
     const [two, setTwo] = useState(100)
 
     useEffect(() => {
+        if (two <= 0) {
+            return
+        }
         setOne(one - increment)
     }, [increment])
     useEffect(() => {
+        if (one <= 0) {
+            return
+        }
         setTwo(two - increment2)
     }, [increment2])
 

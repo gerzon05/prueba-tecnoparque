@@ -17,7 +17,7 @@ export default function CardButton({src, name, move}: {src: string, name: string
         }, 1000);
         setTimeout(() => {
             increaseAuto(Math.floor(Math.random() * 10) + 1);
-        }, 4000);
+        }, 2000);
     }
     return(
         <Button className='border rounded-md p-4 flex flex-col items-center w-fill hover:bg-secondary/20 h-auto bg-transparent focus-within:bg-secondary/20' onClick={(e)=> handleClick(e,move)}>
